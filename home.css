@@ -1,0 +1,336 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .body,
+  .body2,
+  .body3 {
+    background-color:black;
+    color: whitesmoke;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  
+
+/* Navigationsleiste oben */
+  .navbar,
+  .navbar2,
+  .navbar3 {
+    font-family: 'Bree Serif';
+    font-style: italic;
+    font-size: 1.8rem;
+    position: fixed;
+    height: 4rem;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.90);
+    justify-content: center;
+    padding-top: 3rem;
+    padding-right: 10%;
+  }
+  .menu-list li a.highlighted,
+  .menu-list li a.highlighted2,
+  .menu-list li a.highlighted3 {
+    color: goldenrod; /* Farbe des aktuellen Menüpunktes */
+  }
+  
+
+  .menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox verwenden */
+    justify-content: center;
+    align-items: center;
+    padding-right: 10rem;
+  }
+  
+
+  .menu-list li {
+    margin-right: 2rem;
+  }
+  .menu-list li:last-child {
+    margin-right: 0; /* Kein Abstand am Ende (optional) */
+  }
+  
+  .menu-list li a {
+    text-decoration: none;
+    color: wheat; /* Farbe der Menüpunkte (optional) */
+    font-family: serif;
+    font-size: 1rem;
+  }
+  .menu-list li a:hover {
+    color: goldenrod; /* Ändern Sie die Farbe beim Hovern über die Menüpunkte */
+  }
+
+
+  .header {
+    color: antiquewhite;
+    font-family: Righteous;
+    display: flex;
+    flex-direction: column; /* In Spaltenrichtung anordnen */
+    align-items: center; /* Horizontal zentrierte Ausrichtung */
+    justify-content: center;
+  }
+
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-top: 4rem;
+  }
+  
+  .text-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Flexbox auf verfügbaren Platz einstellen */
+    margin-top: 2rem; 
+  }
+  
+  .header-pic {
+    display: flex;
+    justify-content: flex-end; /* Bild rechts ausrichten */
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .header-pic img {
+    margin-top: 2rem;
+    margin-left: 3.125rem; /* Abstand Bild zu Text*/
+    height: 25rem;
+    width: auto;
+  }
+  
+  .Jeroen-Schweppe {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; /* Horizontal zentrieren */
+    text-align: center; /* Text zentrieren */
+  }
+
+  .Jeroen-Schweppe h1 {
+    margin: 0; /* Entfernen Sie den Standardabstand */
+    margin-left: 15%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    font-weight: 2rem;
+    letter-spacing: 0.5rem;
+    line-height: 1;
+  }
+
+  .About-me {
+    color: rgb(212, 205, 205);
+    line-height: 2;
+  }
+  .About-me::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 0.0625rem; /* Höhe des Strichs */
+    background-color: #c4bdbd; /* Farbe des Strichs */
+    margin-bottom: 0.125rem; /* Abstand zwischen dem Strich und dem Text */
+  }
+
+
+  .Filmcomposer {
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin-left: 13%;
+    font-size: 1.2rem;
+  }
+  .Filmcomposer h3 {
+    font-weight: lighter;
+  }
+
+
+  /*Flexbox für Fotos*/
+  .Fotos {
+    display: flex;
+    margin-top: 6.25rem;
+  }
+
+  .Studio-pic,
+  .Awards-pic {
+    flex: 1;
+    margin: 0.3125rem; /* Optional: Abstand zwischen den Bildern */
+  }
+
+
+  .Studio-pic img, 
+  .Awards-pic  img {
+    height: 25rem;
+  }
+
+  
+
+  .contact h2,
+  .music h2 {
+    margin-top: 10rem;
+    text-align: center;
+    color: antiquewhite;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    letter-spacing: 0.3125rem;
+    word-spacing: 0.625rem;
+  }
+
+  .contact-content {
+    display: flex;
+    align-items: flex-start; /* Elemente oben ausrichten */
+    margin-top: 5rem; /* Vergrößert den Abstand zum Header */
+    margin-bottom: 5rem;
+  }
+
+  .Foto-Contact {
+    flex: 1; /* Nimmt den verfügbaren Platz ein */
+    margin-right: 1.25rem; /* Optional: Abstand zwischen Bild und Formular */
+  }
+
+  .Foto-Contact img{
+    height: 30rem;
+    margin-bottom: 0;
+  }
+
+
+  .music {
+    margin-top: 12.5rem;
+    text-align: center;
+    color: antiquewhite;
+  }
+
+
+
+  /*ordne Bild und Links nebeneinaner an*/
+  .container {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 5rem;
+  }
+
+  .music-pic {
+    flex: 1;
+    margin-right: 1.25rem;
+  }
+  .music-pic img {
+    height: 16.875rem;
+  }
+
+  .link-list {
+    flex: 1;
+  }
+
+  .musik-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem; /* Größe der Links*/
+    margin-bottom: 4rem; /* Anpassung des Abstands unten */
+  }
+  .musik-links li {
+    margin-bottom: 2.5rem; /* Optional: Abstand zwischen den Links */
+    text-align: left;
+}
+  .musik-links li a {
+    display: block; /* Links als Blockelemente anzeigen, um sie untereinander anzuordnen */
+    text-decoration: none; /* Entfernt die Standard-Link-Unterstreichung */
+    color: rgb(128, 98, 227);
+}
+
+
+
+
+  .contact-me {
+    color: antiquewhite;
+    margin-top: -0.5rem;
+  }
+
+  .contact-in-lines {
+    border-top: 0.1rem solid blanchedalmond; /* Stil, Breite und Farbe der oberen Linie */
+    border-bottom: 0.1rem solid blanchedalmond; /* Stil, Breite und Farbe der unteren Linie */
+    width: 20rem;
+    padding: 0.1rem; /* Optional: Raum um den Text herum */
+    padding-top: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 10%;
+    color: antiquewhite;
+  }
+  .contact-info {
+    display: flex;
+    flex-wrap: nowrap; /* Verhindert den Zeilenumbruch der Elemente in der Flexbox */
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.0625rem;
+    line-height: 2.5rem;
+  }
+  .contact-info p {
+    margin: 0.5rem 0; /* Vergrößert den Abstand zwischen den Zeilen */
+    white-space: nowrap; /* Verhindert den Zeilenumbruch innerhalb der <p> Tags */
+  }
+  .contact-info p:nth-child(2) {
+    margin-left: 1.25rem; /* Fügt zusätzlichen Abstand zwischen Email und Phone hinzu */
+  }
+
+
+  .contact-in-lines textarea {
+    margin-bottom: 5.625rem; /* Vergrößert den Abstand des Texteingabebereichs zur unteren Linie der Textbox */
+  }
+
+  /* send a message*/
+  .input-field .item,
+  .textarea-field .item {
+    width: 100%;
+    padding: 1rem; /* Anpassen nach Bedarf */
+    margin-bottom: 0.5rem; /* Anpassen nach Bedarf */
+    border: 0.05rem solid #ccc; /* Anpassen nach Bedarf */
+    border-radius: 0; /* Anpassen nach Bedarf */
+    box-sizing: border-box;
+    background-color: black;
+    color: antiquewhite;
+  }
+
+  .error-txt {
+    color: red;
+    font-size: small;
+    margin: -0.3125rem 0 0.625rem;
+    display: none;
+  }
+
+  .field .error-txt {
+    color:red;
+    font-size: small;
+    text-align: left;
+    margin: -0.3125rem 0 0.625rem;
+  }
+
+  form .textarea-field .error-txt {
+    margin-top: -0.625rem;
+  }
+  
+  form .textarea-field .item {
+    resize: none;
+  }
+
+  form button {
+    padding: 1.2rem 3.2rem;
+    box-shadow: 0 0 1rem #ccc;
+  }
+
+   /* Tablets */
+   @media  screen and (max-width: 768px) {
+    .header-pic img {
+        height: 20rem;
+    }
+  }   
+
+  /* Mobile Geräte */
+  @media screen and (max-width: 480px) {
+    .header-content {
+      flex-direction: column;
+    }
+  }
