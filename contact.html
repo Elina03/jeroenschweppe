@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://github.com/Elina03/jeroenschweppe/blob/main/home.css" type="text/css" rel="stylesheet">
+  <title>Jeroen Schweppe</title>
+
+  <link rel="stylesheet" href="css/home.css"> <!-- Für Transition zwischen Seiten -->
+
+
+  <link rel="icon" href="https://raw.githubusercontent.com/Elina03/jeroenschweppe/main/favicon.ico" type="image/png">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Einzelne link-Tags für jede Schriftart -->
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gasoek+One&family=Merriweather:ital@1&family=Righteous&family=Space+Mono&family=Work+Sans&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Gasoek+One&family=Merriweather:ital@1&family=Oswald:wght@200;300;700&family=Righteous&family=Space+Mono&family=Timmana&family=Work+Sans&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bree+Serif&family=Gasoek+One&family=Merriweather:ital@1&family=Oswald:wght@200;300;700&family=Righteous&family=Space+Mono&family=Timmana&family=Work+Sans&display=swap" rel="stylesheet">
+  
+</head>
+
+
+<body class="body2">
+  <nav class="navbar2">
+    <ul class="menu-list">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="contact.html" class="highlighted2">Contact</a></li>
+      <!-- Weitere Menüpunkte -->
+    </ul>
+  </nav>
+
+<div class="transition2">
+  <div class="contact">
+    <h2>Contact</h2>
+  </div>
+
+  <div class="contact-in-lines">
+    <div class="contact-info">
+      <p>E-Mail: j.p.schweppe@gmail.com<br>
+      Mobile: 0151 53381623</p>
+    </div>
+  </div>
+
+  <div class="contact-content">
+    <div class="Foto-Contact">
+      <img src="https://github.com/Elina03/jeroenschweppe/blob/main/pic2.jpeg">
+    </div>
+    
+   <section class="contact-me">
+    <h3>Send a message</h3>
+
+    <form action="mailto:elina.schweppe@gmail.com" method="post" enctype="text/plain" id="contactForm">
+      <div class="input-field">
+        <div class="input-box">
+          <div class="input-field field">
+           <input type="text" placeholder="Name" name="name" id="name" class="item" autocomplete="off">
+           <div class="error-txt">Name can't be blank</div>
+
+           <input type="email" placeholder="Email" name="email" id="email" class="item" autocomplete="off">
+           <div class="error-txt">Email can't be blank</div>
+
+           <input type="text" placeholder="Subject" name="subject" id="subject" class="item" autocomplete="off">
+           <div class="error-txt">Subject can't be blank</div>
+          </div>
+        </div>
+        <div class="textarea-field field">
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+          <div class="error-txt">Message can't be blank</div>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </div>
+    </form>
+   </section> 
+  </div>
+
+</div>
+</div>
+
+
+<div class="script">
+<script>
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Verhindert das automatische Senden des Formulars
+
+    // Validierung der Felder
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    let isValid = true;
+
+    if (name === '') {
+      highlightField('name');
+      isValid = false;
+    }
+    if (email === '') {
+      highlightField('email');
+      isValid = false;
+    }
+    if (subject === '') {
+      highlightField('subject');
+      isValid = false;
+    }
+    if (message === '') {
+      highlightField('message');
+      isValid = false;
+    }
+
+    if (isValid) {
+      // Formular ist gültig, sende die Daten
+      this.submit();
+    }
+  });
+
+  function highlightField(fieldId) {
+    const field = document.getElementById(fieldId);
+    field.classList.add('error'); // Fügt der Klasse "error" hinzu, um das Feld rot zu machen
+    const errorTxt = field.nextElementSibling; // Annahme: Fehlermeldung ist als nächstes Element vorhanden
+    errorTxt.style.display = 'block'; // Zeigt die Fehlermeldung an
+  }
+</script>
+</div>
+
+   
+
+</body>
+</html>
